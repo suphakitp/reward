@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คลังผลงานรางวัล — วิทยาลัยเทคนิคศรีสะเกษ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* วิทยาลัยเทคนิคศรีสะเกษ — Navy + Gold palette */
+  --navy-900: #0B1F3A;
+  --navy-800: #122847;
+  --navy-700: #1A3560;
+  --navy-600: #214278;
+  --navy-400: #4A72B0;
+  --navy-200: #A8C0DF;
+  --navy-100: #D4E2F0;
+  --navy-50:  #EBF2F9;
+
+  --gold-600: #C49A0A;
+  --gold-500: #D4A80F;
+  --gold-400: #E8BE2A;
+  --gold-300: #F2D060;
+  --gold-100: #FBF0C4;
+  --gold-50:  #FDFAE8;
+
+  --teal-600: #0A7B6C;
+  --teal-100: #D0EDE9;
+  --teal-50:  #E8F6F4;
+
+  --red-600:  #B82B2B;
+  --red-50:   #FCEAEA;
+  --red-100:  #F5C0C0;
+
+  --green-600: #2B7A3C;
+  --green-50:  #E8F5EC;
+  --green-100: #BDE3C7;
+
+  --amber-600: #9A5B08;
+  --amber-50:  #FEF5E4;
+  --amber-100: #FAD99A;
+
+  --gray-900: #111827;
+  --gray-700: #374151;
+  --gray-500: #6B7280;
+  --gray-300: #D1D5DB;
+  --gray-200: #E5E7EB;
+  --gray-100: #F3F4F6;
+  --gray-50:  #F9FAFB;
+
+  --bg: #F0F4F9;
+  --surface: #FFFFFF;
+  --border: rgba(18, 40, 71, 0.12);
+  --text: var(--gray-900);
+  --text-muted: var(--gray-500);
+  --accent: var(--navy-700);
+  --accent-light: var(--navy-50);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(11,31,58,0.10), 0 1px 3px rgba(11,31,58,0.06);
+  --shadow-lg: 0 10px 30px rgba(11,31,58,0.14), 0 2px 8px rgba(11,31,58,0.06);
+}
+
+body {
+  font-family: 'IBM Plex Sans Thai', 'Sarabun', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* ========== PAGES ========== */
+.page { display: none; }
+.page.active { display: block; }
+
+/* ========== AUTH ========== */
+.auth-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+}
+
+.auth-left {
+  flex: 1;
+  background: linear-gradient(160deg, var(--navy-900) 0%, var(--navy-700) 60%, var(--navy-600) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-left::before {
+  content: '';
+  position: absolute;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(196,154,10,0.18) 0%, transparent 70%);
+  top: -80px; right: -80px;
+}
+
+.auth-left::after {
+  content: '';
+  position: absolute;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(196,154,10,0.10) 0%, transparent 70%);
+  bottom: -60px; left: -60px;
+}
+
+.auth-school-badge {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(196,154,10,0.35);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  max-width: 340px;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(4px);
+}
+
+.auth-emblem {
+  width: 72px; height: 72px;
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-600));
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 0 0 6px rgba(196,154,10,0.18), 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.auth-emblem i { font-size: 34px; color: var(--navy-900); }
+
+.auth-school-name {
+  color: var(--gold-300);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.auth-school-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.auth-school-sub {
+  color: var(--navy-200);
+  font-size: 13px;
+}
+
+.auth-school-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(196,154,10,0.4), transparent);
+  margin: 1.25rem 0;
+}
+
+.auth-system-label {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(196,154,10,0.15);
+  border: 1px solid rgba(196,154,10,0.3);
+  color: var(--gold-300);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 100px;
+}
+
+.auth-right {
+  width: 420px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2.5rem;
+  background: var(--surface);
+}
+
+.auth-form-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy-800);
+  margin-bottom: 4px;
+}
+
+.auth-form-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.auth-tabs {
+  display: flex;
+  background: var(--gray-100);
+  border-radius: var(--radius-md);
+  padding: 3px;
+  margin-bottom: 1.75rem;
+  width: 100%;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 9px 14px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: all 0.18s;
+}
+
+.auth-tab.active {
+  background: var(--surface);
+  color: var(--navy-800);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ========== FORMS ========== */
+.form-group { margin-bottom: 1rem; }
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 5px;
+  letter-spacing: 0.2px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--gray-50);
+  color: var(--text);
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--navy-400);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(26,53,96,0.10);
+}
+
+.form-group textarea { resize: vertical; min-height: 88px; }
+
+.input-icon-wrap { position: relative; }
+.input-icon-wrap i {
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  color: var(--text-muted); font-size: 16px; pointer-events: none;
+}
+.input-icon-wrap input { padding-left: 38px; }
+
+/* ========== BUTTONS ========== */
+.btn {
+  border: 1.5px solid var(--gray-200);
+  background: var(--surface);
+  color: var(--gray-700);
+  border-radius: var(--radius-md);
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: inherit;
+  transition: all 0.15s;
+  line-height: 1;
+}
+
+.btn:hover { background: var(--gray-100); border-color: var(--gray-300); }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--navy-700), var(--navy-600));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(26,53,96,0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--navy-800), var(--navy-700));
+  box-shadow: 0 4px 12px rgba(26,53,96,0.32);
+  transform: translateY(-1px);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-600));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(196,154,10,0.30);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, var(--gold-600), var(--gold-600));
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background: transparent;
+  color: var(--red-600);
+  border-color: var(--red-100);
+}
+.btn-danger:hover { background: var(--red-50); }
+
+.btn-success {
+  background: var(--green-50);
+  color: var(--green-600);
+  border-color: var(--green-100);
+}
+.btn-success:hover { background: var(--green-100); }
+
+.btn-sm { padding: 6px 12px; font-size: 12px; border-radius: var(--radius-sm); }
+.btn-lg { padding: 12px 24px; font-size: 15px; border-radius: var(--radius-md); }
+.btn-full { width: 100%; justify-content: center; }
+
+/* ========== ALERTS ========== */
+.alert {
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.alert-warn  { background: var(--amber-50); color: var(--amber-600); border: 1px solid var(--amber-100); }
+.alert-danger { background: var(--red-50); color: var(--red-600); border: 1px solid var(--red-100); }
+.alert-success { background: var(--green-50); color: var(--green-600); border: 1px solid var(--green-100); }
+
+/* pending screen */
+.pending-msg { text-align: center; padding: 2rem; }
+.pending-icon {
+  width: 64px; height: 64px;
+  background: var(--amber-50);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1rem;
+}
+.pending-icon i { font-size: 30px; color: var(--amber-600); }
+.pending-msg h3 { font-size: 17px; font-weight: 600; color: var(--navy-800); margin-bottom: 6px; }
+.pending-msg p { font-size: 13px; color: var(--text-muted); }
+
+/* ========== TOP NAV ========== */
+nav {
+  background: var(--navy-900);
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-brand-icon {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-600));
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.nav-brand-icon i { font-size: 20px; color: var(--navy-900); }
+
+.nav-brand-text { line-height: 1.2; }
+
+.nav-brand-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.nav-brand-subtitle {
+  font-size: 10px;
+  color: var(--navy-200);
+  font-weight: 400;
+}
+
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+
+.nav-user-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 100px;
+  padding: 5px 12px 5px 5px;
+}
+
+.nav-user-avatar {
+  width: 28px; height: 28px;
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-600));
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy-900);
+  flex-shrink: 0;
+}
+
+.nav-user-name {
+  font-size: 13px;
+  color: rgba(255,255,255,0.9);
+  font-weight: 500;
+}
+
+.btn-nav-logout {
+  border: 1px solid rgba(255,255,255,0.18);
+  background: transparent;
+  color: rgba(255,255,255,0.75);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.btn-nav-logout:hover {
+  background: rgba(255,255,255,0.10);
+  color: #fff;
+}
+
+/* ========== LAYOUT ========== */
+.main-layout { display: flex; min-height: calc(100vh - 60px); }
+
+.sidebar {
+  width: 230px;
+  flex-shrink: 0;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 1.25rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sidebar-section {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gray-300);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 12px 10px 5px;
+}
+
+.sidebar-menu { list-style: none; }
+.sidebar-menu li { margin-bottom: 1px; }
+
+.sidebar-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  color: var(--gray-500);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.sidebar-menu a:hover {
+  background: var(--navy-50);
+  color: var(--navy-700);
+}
+
+.sidebar-menu a.active {
+  background: linear-gradient(135deg, var(--navy-700), var(--navy-600));
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar-menu a.active i { color: rgba(255,255,255,0.85); }
+
+.sidebar-menu a i { font-size: 18px; }
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 10px 12px;
+  background: var(--gold-50);
+  border: 1px solid var(--gold-100);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-size: 11px;
+  color: var(--amber-600);
+  font-weight: 500;
+}
+
+.content-area { flex: 1; padding: 2rem; overflow: auto; }
+
+/* ========== PAGE HEADER ========== */
+.page-header { margin-bottom: 1.75rem; }
+
+.page-header-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.page-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-bottom: 3px;
+}
+
+.page-header p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.page-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.page-breadcrumb i { font-size: 14px; }
+
+/* ========== STAT CARDS ========== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-icon {
+  width: 44px; height: 44px;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-icon-blue { background: var(--navy-50); color: var(--navy-700); }
+.stat-icon-gold { background: var(--gold-50); color: var(--gold-600); }
+.stat-icon-amber { background: var(--amber-50); color: var(--amber-600); }
+.stat-icon-teal  { background: var(--teal-50); color: var(--teal-600); }
+
+.stat-icon i { font-size: 22px; }
+
+.stat-body {}
+.stat-label { font-size: 12px; color: var(--text-muted); font-weight: 500; margin-bottom: 2px; }
+.stat-val { font-size: 28px; font-weight: 700; color: var(--navy-900); line-height: 1; }
+
+/* ========== SECTION CARD ========== */
+.section-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.section-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy-800);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-card-title i { color: var(--gold-600); font-size: 18px; }
+
+/* ========== GALLERY ========== */
+.search-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+}
+
+.search-input-wrap {
+  flex: 1;
+  position: relative;
+}
+
+.search-input-wrap i {
+  position: absolute;
+  left: 14px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+.search-input-wrap input {
+  width: 100%;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 10px 14px 10px 42px;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--surface);
+  color: var(--text);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.search-input-wrap input:focus {
+  outline: none;
+  border-color: var(--navy-400);
+  box-shadow: 0 0 0 3px rgba(26,53,96,0.10);
+}
+
+.filter-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: 1.5px solid var(--gray-200);
+  background: var(--surface);
+  color: var(--gray-500);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.filter-btn:hover, .filter-btn.active-filter {
+  border-color: var(--navy-700);
+  background: var(--navy-700);
+  color: #fff;
+}
+
+.search-count {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  padding: 0 2px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+/* ========== ITEM CARD ========== */
+.item-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.18s;
+  box-shadow: var(--shadow-sm);
+}
+
+.item-card:hover {
+  border-color: var(--navy-400);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.item-thumb {
+  width: 100%; height: 148px;
+  overflow: hidden;
+  background: var(--navy-50);
+  position: relative;
+}
+
+.item-thumb img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.item-card:hover .item-thumb img { transform: scale(1.04); }
+
+.item-thumb-icon {
+  height: 148px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--navy-50) 0%, var(--navy-100) 100%);
+}
+
+.item-thumb-icon i { font-size: 44px; color: var(--navy-200); }
+
+.item-year-tag {
+  position: absolute;
+  top: 8px; right: 8px;
+  background: rgba(11,31,58,0.72);
+  backdrop-filter: blur(4px);
+  color: var(--gold-300);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 100px;
+}
+
+.item-body { padding: 12px 14px 14px; }
+.item-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy-900);
+  margin-bottom: 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+
+.item-meta { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 4px; }
+
+.item-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--gray-100);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.badge-navy  { background: var(--navy-50); color: var(--navy-700); }
+.badge-gold  { background: var(--gold-50); color: var(--gold-600); border: 1px solid var(--gold-100); }
+.badge-teal  { background: var(--teal-50); color: var(--teal-600); }
+.badge-amber { background: var(--amber-50); color: var(--amber-600); }
+.badge-red   { background: var(--red-50); color: var(--red-600); }
+.badge-green { background: var(--green-50); color: var(--green-600); }
+
+/* ========== EMPTY STATE ========== */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-muted);
+}
+
+.empty-icon {
+  width: 72px; height: 72px;
+  background: var(--gray-100);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.empty-icon i { font-size: 32px; color: var(--gray-300); }
+.empty-state p { font-size: 14px; }
+
+/* ========== UPLOAD ========== */
+.upload-zone {
+  border: 2px dashed var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.18s;
+  background: var(--gray-50);
+}
+
+.upload-zone:hover {
+  border-color: var(--navy-400);
+  background: var(--navy-50);
+}
+
+.upload-zone-icon {
+  width: 56px; height: 56px;
+  background: var(--navy-50);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.upload-zone-icon i { font-size: 28px; color: var(--navy-500); }
+.upload-zone h4 { font-size: 15px; font-weight: 600; color: var(--navy-800); margin-bottom: 4px; }
+.upload-zone p { font-size: 13px; color: var(--text-muted); }
+
+#fileInput { display: none; }
+
+.file-rename-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 6px;
+}
+
+.file-rename-row .fthumb { width: 44px; height: 44px; object-fit: cover; border-radius: var(--radius-sm); flex-shrink: 0; }
+.file-rename-row .ficon {
+  width: 44px; height: 44px;
+  background: var(--navy-50);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.file-rename-row .ficon i { font-size: 22px; color: var(--navy-400); }
+.file-rename-row .fname-input {
+  flex: 1;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  padding: 7px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  background: var(--gray-50);
+  color: var(--text);
+}
+.file-rename-row .fname-input:focus { outline: none; border-color: var(--navy-400); }
+.file-rename-row .fsize { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+
+.files-header { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; }
+
+.form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.col-span-2 { grid-column: 1 / -1; }
+
+.divider { border: none; border-top: 1px solid var(--gray-100); margin: 1.5rem 0; }
+
+/* ========== PROGRESS ========== */
+.progress-bar {
+  height: 6px;
+  background: var(--gray-100);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--navy-700), var(--navy-400));
+  border-radius: 100px;
+  transition: width 0.3s ease;
+}
+
+/* ========== TABLE ========== */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.user-table th {
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1.5px solid var(--gray-200);
+  background: var(--gray-50);
+}
+
+.user-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+.user-table th:last-child  { border-radius: 0 var(--radius-sm) 0 0; }
+
+.user-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--gray-100);
+  vertical-align: middle;
+}
+
+.user-table tr:last-child td { border-bottom: none; }
+.user-table tbody tr:hover td { background: var(--navy-50); }
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 11px;
+  border-radius: 100px;
+}
+
+.status-badge::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.status-pending  { background: var(--amber-50); color: var(--amber-600); }
+.status-approved { background: var(--green-50);  color: var(--green-600); }
+.status-rejected { background: var(--red-50);    color: var(--red-600); }
+
+/* ========== MODAL ========== */
+.modal-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(3px);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-backdrop.open { display: flex; }
+
+.modal {
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  animation: modal-in 0.2s ease;
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.modal-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky; top: 0;
+  background: var(--surface);
+  z-index: 1;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.modal-header h3 { font-size: 17px; font-weight: 700; color: var(--navy-900); }
+.modal-body { padding: 1.5rem; }
+.modal-img { width: 100%; border-radius: var(--radius-md); margin-bottom: 1.25rem; max-height: 320px; object-fit: cover; }
+
+.detail-row {
+  display: flex;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 14px;
+}
+
+.detail-row:last-child { border-bottom: none; }
+.detail-label { width: 130px; color: var(--text-muted); flex-shrink: 0; font-weight: 500; font-size: 13px; }
+
+/* ========== CONFIG CARD ========== */
+.config-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.config-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy-800);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.config-card h3 i { color: var(--gold-600); }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .auth-left { display: none; }
+  .auth-right { width: 100%; }
+}
+
+@media (max-width: 640px) {
+  .sidebar { display: none; }
+  .content-area { padding: 1rem; }
+  nav { padding: 0 1rem; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .form-grid-2 { grid-template-columns: 1fr; }
+  .col-span-2 { grid-column: auto; }
+  .nav-brand-subtitle { display: none; }
+}
+
+/* ========== MISC ========== */
+code {
+  background: var(--gray-100);
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--navy-700);
+}
+</style>
+</head>
+<body>
+
+<!-- ========== AUTH PAGE ========== -->
+<div id="authPage" class="page active">
+  <div class="auth-wrap">
+
+    <div class="auth-left">
+      <div class="auth-school-badge">
+        <div class="auth-emblem">
+          <i class="ti ti-school"></i>
+        </div>
+        <div class="auth-school-name">Sisaket Technical College</div>
+        <div class="auth-school-title">วิทยาลัยเทคนิคศรีสะเกษ</div>
+        <div class="auth-school-sub">สังกัดสำนักงานคณะกรรมการการอาชีวศึกษา</div>
+        <div class="auth-school-divider"></div>
+        <div class="auth-system-label">
+          <i class="ti ti-trophy" style="font-size:13px"></i>
+          คลังผลงานและรางวัล
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-right">
+      <div style="width:100%;max-width:340px">
+        <div class="auth-form-title">ยินดีต้อนรับ</div>
+        <div class="auth-form-sub">เข้าสู่ระบบเพื่อใช้งานคลังผลงานสถานศึกษา</div>
+
+        <!-- Pending -->
+        <div id="pendingScreen" style="display:none">
+          <div class="pending-msg">
+            <div class="pending-icon"><i class="ti ti-clock-hour-4"></i></div>
+            <h3>รอการอนุมัติ</h3>
+            <p>บัญชีของคุณกำลังรอผู้ดูแลระบบตรวจสอบ<br>กรุณารอการอนุมัติก่อนเข้าใช้งาน</p>
+            <button class="btn" style="margin-top:1.25rem" onclick="showAuth()">
+              <i class="ti ti-arrow-left"></i> กลับหน้าเข้าสู่ระบบ
+            </button>
+          </div>
+        </div>
+
+        <div id="authForms">
+          <div class="auth-tabs">
+            <div class="auth-tab active" onclick="switchTab('login')">เข้าสู่ระบบ</div>
+            <div class="auth-tab" onclick="switchTab('register')">สมัครสมาชิก</div>
+          </div>
+
+          <!-- Login -->
+          <div id="loginForm">
+            <div id="loginAlert"></div>
+            <div class="form-group">
+              <label>ชื่อผู้ใช้</label>
+              <div class="input-icon-wrap">
+                <i class="ti ti-user"></i>
+                <input type="text" id="loginUser" placeholder="กรอก username">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>รหัสผ่าน</label>
+              <div class="input-icon-wrap">
+                <i class="ti ti-lock"></i>
+                <input type="password" id="loginPass" placeholder="กรอกรหัสผ่าน" onkeydown="if(event.key==='Enter')doLogin()">
+              </div>
+            </div>
+            <button class="btn btn-primary btn-full btn-lg" onclick="doLogin()">
+              <i class="ti ti-login"></i> เข้าสู่ระบบ
+            </button>
+            <p style="font-size:12px;color:var(--text-muted);margin-top:14px;text-align:center;background:var(--gray-50);border-radius:var(--radius-md);padding:8px 12px">
+              <i class="ti ti-info-circle" style="font-size:13px;vertical-align:-1px;margin-right:3px"></i>
+              ผู้ดูแลระบบ: <code>admin / admin1234</code>
+            </p>
+          </div>
+
+          <!-- Register -->
+          <div id="registerForm" style="display:none">
+            <div id="regAlert"></div>
+            <div class="form-group">
+              <label>ชื่อ-นามสกุล</label>
+              <div class="input-icon-wrap">
+                <i class="ti ti-id-badge"></i>
+                <input type="text" id="regName" placeholder="ชื่อ นามสกุล">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>ชื่อผู้ใช้</label>
+              <div class="input-icon-wrap">
+                <i class="ti ti-user"></i>
+                <input type="text" id="regUser" placeholder="username (ภาษาอังกฤษ)">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>รหัสผ่าน</label>
+              <div class="input-icon-wrap">
+                <i class="ti ti-lock"></i>
+                <input type="password" id="regPass" placeholder="อย่างน้อย 6 ตัวอักษร">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>ตำแหน่ง / แผนก</label>
+              <div class="input-icon-wrap">
+                <i class="ti ti-building"></i>
+                <input type="text" id="regDept" placeholder="เช่น ครูแผนกช่างไฟฟ้า">
+              </div>
+            </div>
+            <button class="btn btn-primary btn-full btn-lg" onclick="doRegister()">
+              <i class="ti ti-user-plus"></i> สมัครสมาชิก
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========== MAIN APP ========== -->
+<div id="appPage" class="page">
+
+  <nav>
+    <div class="nav-brand">
+      <div class="nav-brand-icon"><i class="ti ti-trophy"></i></div>
+      <div class="nav-brand-text">
+        <div class="nav-brand-title">คลังผลงานรางวัล</div>
+        <div class="nav-brand-subtitle">วิทยาลัยเทคนิคศรีสะเกษ</div>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <div class="nav-user-chip">
+        <div class="nav-user-avatar" id="navUserAvatar">A</div>
+        <span class="nav-user-name" id="navUserName">-</span>
+      </div>
+      <button class="btn-nav-logout" onclick="doLogout()">
+        <i class="ti ti-logout"></i> ออกจากระบบ
+      </button>
+    </div>
+  </nav>
+
+  <div class="main-layout">
+    <aside class="sidebar">
+      <ul class="sidebar-menu" id="sidebarMenu">
+        <li><a onclick="showSection('dashboard')" class="active" data-section="dashboard">
+          <i class="ti ti-layout-dashboard"></i> ภาพรวม
+        </a></li>
+        <li><a onclick="showSection('search')" data-section="search">
+          <i class="ti ti-search"></i> ค้นหาผลงาน
+        </a></li>
+        <li><a onclick="showSection('upload')" data-section="upload">
+          <i class="ti ti-cloud-upload"></i> อัพโหลดผลงาน
+        </a></li>
+      </ul>
+
+      <div class="sidebar-section">จัดการระบบ</div>
+      <ul class="sidebar-menu">
+        <li id="adminMenu" style="display:none"><a onclick="showSection('admin')" data-section="admin">
+          <i class="ti ti-users"></i> อนุมัติผู้ใช้
+        </a></li>
+        <li id="settingsMenu" style="display:none"><a onclick="showSection('settings')" data-section="settings">
+          <i class="ti ti-settings"></i> ตั้งค่าระบบ
+        </a></li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <i class="ti ti-award" style="font-size:15px"></i>
+        วทศก. · ระบบจัดเก็บผลงาน
+      </div>
+    </aside>
+
+    <main class="content-area">
+
+      <!-- DASHBOARD -->
+      <section id="sec-dashboard">
+        <div class="page-header">
+          <div class="page-breadcrumb">
+            <i class="ti ti-home"></i> หน้าหลัก
+          </div>
+          <div class="page-header-inner">
+            <div>
+              <h2>ภาพรวมระบบ</h2>
+              <p>สรุปผลงานและรางวัลของวิทยาลัยเทคนิคศรีสะเกษ</p>
+            </div>
+            <button class="btn btn-gold" onclick="showSection('upload')">
+              <i class="ti ti-plus"></i> เพิ่มผลงาน
+            </button>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon stat-icon-blue"><i class="ti ti-files"></i></div>
+            <div class="stat-body">
+              <div class="stat-label">ผลงานทั้งหมด</div>
+              <div class="stat-val" id="statTotal">0</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon stat-icon-gold"><i class="ti ti-calendar-stats"></i></div>
+            <div class="stat-body">
+              <div class="stat-label">อัพโหลดเดือนนี้</div>
+              <div class="stat-val" id="statMonth">0</div>
+            </div>
+          </div>
+          <div class="stat-card" id="adminStatCard" style="display:none">
+            <div class="stat-icon stat-icon-amber"><i class="ti ti-clock-hour-4"></i></div>
+            <div class="stat-body">
+              <div class="stat-label">รอการอนุมัติ</div>
+              <div class="stat-val" id="statPending">0</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <div class="section-card-title">
+            <i class="ti ti-clock"></i> ผลงานล่าสุด
+          </div>
+          <div id="recentItems" class="gallery-grid"></div>
+        </div>
+      </section>
+
+      <!-- SEARCH -->
+      <section id="sec-search" style="display:none">
+        <div class="page-header">
+          <div class="page-breadcrumb"><i class="ti ti-search"></i> ค้นหาผลงาน</div>
+          <h2>ค้นหาผลงาน</h2>
+          <p>พิมพ์ชื่อผลงาน นักเรียน ปีการศึกษา หรือคีย์เวิร์ดที่ต้องการ</p>
+        </div>
+
+        <div class="search-row">
+          <div class="search-input-wrap">
+            <i class="ti ti-search"></i>
+            <input type="text" id="searchInput" placeholder="ค้นหา เช่น วิทยาศาสตร์, ชนะเลิศ, 2567..." oninput="doSearch()">
+          </div>
+          <button class="btn btn-primary" onclick="doSearch()">
+            <i class="ti ti-search"></i> ค้นหา
+          </button>
+        </div>
+
+        <div id="searchFilters" class="filter-row"></div>
+        <div id="searchCount" class="search-count"></div>
+        <div id="searchResults" class="gallery-grid"></div>
+      </section>
+
+      <!-- UPLOAD -->
+      <section id="sec-upload" style="display:none">
+        <div class="page-header">
+          <div class="page-breadcrumb"><i class="ti ti-cloud-upload"></i> อัพโหลดผลงาน</div>
+          <h2>เพิ่มผลงานใหม่</h2>
+          <p>บันทึกผลงานและรางวัลของนักเรียน/นักศึกษา</p>
+        </div>
+
+        <div class="section-card">
+          <div class="section-card-title">
+            <i class="ti ti-paperclip"></i> ไฟล์แนบ
+          </div>
+          <div id="uploadAlert"></div>
+          <div class="upload-zone" onclick="document.getElementById('fileInput').click()" id="dropZone">
+            <div class="upload-zone-icon"><i class="ti ti-cloud-upload"></i></div>
+            <h4>คลิกหรือลากไฟล์มาวางที่นี่</h4>
+            <p>รองรับ JPG, PNG, PDF, DOCX — เลือกได้หลายไฟล์ (สูงสุด 10MB/ไฟล์)</p>
+          </div>
+          <input type="file" id="fileInput" accept="image/*,.pdf,.doc,.docx,.ppt,.pptx" multiple onchange="onFileSelect(event)">
+          <div id="filePreviewWrap" style="margin-top:12px"></div>
+        </div>
+
+        <div class="section-card">
+          <div class="section-card-title">
+            <i class="ti ti-info-circle"></i> รายละเอียดผลงาน
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group col-span-2">
+              <label>ชื่อผลงาน <span style="color:var(--red-600)">*</span></label>
+              <input type="text" id="upTitle" placeholder="เช่น รางวัลชนะเลิศการแข่งขันวิทยาศาสตร์ระดับภาค">
+            </div>
+            <div class="form-group">
+              <label>ชื่อนักเรียน / นักศึกษา / ทีม</label>
+              <input type="text" id="upStudent" placeholder="ชื่อผู้รับรางวัล">
+            </div>
+            <div class="form-group">
+              <label>ปีการศึกษา</label>
+              <select id="upYear"></select>
+            </div>
+            <div class="form-group">
+              <label>ระดับรางวัล</label>
+              <select id="upLevel">
+                <option value="">-- เลือกระดับ --</option>
+                <option>ระดับสถานศึกษา</option>
+                <option>ระดับจังหวัด</option>
+                <option>ระดับภาค</option>
+                <option>ระดับชาติ</option>
+                <option>นานาชาติ</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>ประเภทรางวัล</label>
+              <select id="upAward">
+                <option value="">-- เลือกประเภท --</option>
+                <option>ชนะเลิศ / เหรียญทอง</option>
+                <option>รองชนะเลิศ / เหรียญเงิน</option>
+                <option>รางวัลที่ 3 / เหรียญทองแดง</option>
+                <option>รางวัลชมเชย</option>
+                <option>รางวัลพิเศษ</option>
+                <option>ผ่านการคัดเลือก</option>
+              </select>
+            </div>
+            <div class="form-group col-span-2">
+              <label>รายละเอียดเพิ่มเติม</label>
+              <textarea id="upDesc" placeholder="รายละเอียดผลงาน ชื่อครูผู้ควบคุม สถานที่จัดแข่งขัน ฯลฯ"></textarea>
+            </div>
+            <div class="form-group col-span-2">
+              <label>แท็ก <span style="font-weight:400;color:var(--text-muted)">(คั่นด้วยจุลภาค)</span></label>
+              <input type="text" id="upTags" placeholder="เช่น ช่างไฟฟ้า, โอลิมปิก, ปวช.">
+            </div>
+          </div>
+
+          <div id="uploadProgress" style="display:none;margin-bottom:1rem">
+            <div class="progress-bar"><div class="progress-fill" id="progFill" style="width:0%"></div></div>
+            <p style="font-size:12px;color:var(--text-muted);margin-top:6px" id="progText">กำลังอัพโหลด...</p>
+          </div>
+
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-primary" onclick="doUpload()">
+              <i class="ti ti-device-floppy"></i> บันทึกผลงาน
+            </button>
+            <button class="btn" onclick="resetUploadForm()">
+              <i class="ti ti-refresh"></i> ล้างข้อมูล
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ADMIN -->
+      <section id="sec-admin" style="display:none">
+        <div class="page-header">
+          <div class="page-breadcrumb"><i class="ti ti-users"></i> จัดการ</div>
+          <h2>อนุมัติผู้ใช้งาน</h2>
+          <p>ตรวจสอบและอนุมัติคำขอสมัครสมาชิก</p>
+        </div>
+        <div class="section-card" style="padding:0;overflow:hidden">
+          <div style="overflow-x:auto">
+            <table class="user-table" id="userTable">
+              <thead>
+                <tr>
+                  <th>ชื่อ-นามสกุล</th>
+                  <th>Username</th>
+                  <th>ตำแหน่ง / แผนก</th>
+                  <th>วันที่สมัคร</th>
+                  <th>สถานะ</th>
+                  <th>จัดการ</th>
+                </tr>
+              </thead>
+              <tbody id="userTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section id="sec-settings" style="display:none">
+        <div class="page-header">
+          <div class="page-breadcrumb"><i class="ti ti-settings"></i> จัดการ</div>
+          <h2>ตั้งค่าระบบ</h2>
+          <p>กำหนดค่าการเชื่อมต่อและข้อมูลระบบ</p>
+        </div>
+
+        <div class="config-card">
+          <h3><i class="ti ti-cloud"></i> Cloudinary Configuration</h3>
+          <div id="settingsAlert"></div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Cloud Name</label>
+              <input type="text" id="cfCloudName" placeholder="your-cloud-name">
+            </div>
+            <div class="form-group">
+              <label>Upload Preset (Unsigned)</label>
+              <input type="text" id="cfPreset" placeholder="your-upload-preset">
+            </div>
+          </div>
+          <p style="font-size:12px;color:var(--text-muted);margin-bottom:1rem">
+            สร้าง Unsigned preset ที่ Cloudinary Dashboard → Settings → Upload
+          </p>
+          <button class="btn btn-primary" onclick="saveCloudinaryConfig()">
+            <i class="ti ti-device-floppy"></i> บันทึกการตั้งค่า
+          </button>
+        </div>
+
+        <div class="config-card">
+          <h3><i class="ti ti-database"></i> ข้อมูลในระบบ</h3>
+          <p style="font-size:13px;color:var(--text-muted);margin-bottom:1rem">
+            ข้อมูล metadata ถูกเก็บไว้ใน localStorage ของเบราว์เซอร์
+          </p>
+          <button class="btn btn-danger btn-sm" onclick="clearAllData()">
+            <i class="ti ti-trash"></i> ล้างข้อมูลทั้งหมด (ทดสอบ)
+          </button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- DETAIL MODAL -->
+<div class="modal-backdrop" id="detailModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modalTitle">รายละเอียดผลงาน</h3>
+      <button class="btn btn-sm" onclick="closeModal()"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+// ============ STATE ============
+let currentUser = null;
+let selectedFiles = [];
+
+const DB = {
+  get(k) { try { return JSON.parse(localStorage.getItem(k)) || null; } catch(e) { return null; } },
+  set(k, v) { localStorage.setItem(k, JSON.stringify(v)); },
+};
+
+function initDB() {
+  if (!DB.get('users')) {
+    DB.set('users', [{ id:1, name:'ผู้ดูแลระบบ', username:'admin', password:'admin1234', role:'admin', dept:'Admin', status:'approved', createdAt: new Date().toISOString() }]);
+  }
+  if (!DB.get('items')) DB.set('items', []);
+  if (!DB.get('cloudinary')) DB.set('cloudinary', { cloudName:'', preset:'' });
+}
+
+// ============ AUTH ============
+function switchTab(tab) {
+  document.querySelectorAll('.auth-tab').forEach((t,i) => t.classList.toggle('active', (tab==='login'&&i===0)||(tab==='register'&&i===1)));
+  document.getElementById('loginForm').style.display = tab==='login'?'block':'none';
+  document.getElementById('registerForm').style.display = tab==='register'?'block':'none';
+}
+
+function showAlert(id, msg, type='danger') {
+  const icons = { danger:'ti-alert-circle', warn:'ti-alert-triangle', success:'ti-circle-check' };
+  document.getElementById(id).innerHTML = `<div class="alert alert-${type}"><i class="ti ${icons[type]||'ti-info-circle'}" style="font-size:15px;flex-shrink:0;margin-top:1px"></i><span>${msg}</span></div>`;
+}
+
+function doLogin() {
+  const u = document.getElementById('loginUser').value.trim();
+  const p = document.getElementById('loginPass').value;
+  const users = DB.get('users') || [];
+  const user = users.find(x => x.username===u && x.password===p);
+  if (!user) return showAlert('loginAlert','ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง');
+  if (user.status==='pending') {
+    document.getElementById('authForms').style.display='none';
+    document.getElementById('pendingScreen').style.display='block';
+    return;
+  }
+  if (user.status==='rejected') return showAlert('loginAlert','บัญชีของคุณถูกปฏิเสธ กรุณาติดต่อผู้ดูแลระบบ');
+  currentUser = user;
+  loadApp();
+}
+
+function doRegister() {
+  const name=document.getElementById('regName').value.trim();
+  const username=document.getElementById('regUser').value.trim();
+  const password=document.getElementById('regPass').value;
+  const dept=document.getElementById('regDept').value.trim();
+  if (!name||!username||!password) return showAlert('regAlert','กรุณากรอกข้อมูลให้ครบถ้วน');
+  if (password.length<6) return showAlert('regAlert','รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร');
+  const users = DB.get('users') || [];
+  if (users.find(x=>x.username===username)) return showAlert('regAlert','ชื่อผู้ใช้นี้ถูกใช้งานแล้ว');
+  users.push({ id:Date.now(), name, username, password, role:'user', dept, status:'pending', createdAt:new Date().toISOString() });
+  DB.set('users', users);
+  showAlert('regAlert','สมัครสมาชิกสำเร็จ! รอผู้ดูแลระบบอนุมัติบัญชีของคุณ','success');
+  document.getElementById('authForms').style.display='none';
+  document.getElementById('pendingScreen').style.display='block';
+}
+
+function showAuth() {
+  document.getElementById('authForms').style.display='block';
+  document.getElementById('pendingScreen').style.display='none';
+}
+
+function doLogout() {
+  currentUser=null;
+  document.getElementById('authPage').classList.add('active');
+  document.getElementById('appPage').classList.remove('active');
+  document.getElementById('loginUser').value='';
+  document.getElementById('loginPass').value='';
+  document.getElementById('loginAlert').innerHTML='';
+  document.getElementById('authForms').style.display='block';
+  document.getElementById('pendingScreen').style.display='none';
+}
+
+function loadApp() {
+  document.getElementById('authPage').classList.remove('active');
+  document.getElementById('appPage').classList.add('active');
+  document.getElementById('navUserName').textContent = currentUser.name;
+  document.getElementById('navUserAvatar').textContent = currentUser.name.charAt(0).toUpperCase();
+  const isAdmin = currentUser.role==='admin';
+  document.getElementById('adminMenu').style.display = isAdmin?'block':'none';
+  document.getElementById('settingsMenu').style.display = isAdmin?'block':'none';
+  document.getElementById('adminStatCard').style.display = isAdmin?'block':'none';
+  loadCloudinaryConfig();
+  showSection('dashboard');
+}
+
+// ============ SECTIONS ============
+function showSection(name) {
+  ['dashboard','search','upload','admin','settings'].forEach(s => {
+    document.getElementById('sec-'+s).style.display = s===name?'block':'none';
+  });
+  document.querySelectorAll('.sidebar-menu a').forEach(a => {
+    a.classList.toggle('active', a.dataset.section===name);
+  });
+  if (name==='dashboard') renderDashboard();
+  if (name==='search') renderSearch('');
+  if (name==='admin') renderAdmin();
+  if (name==='settings') loadCloudinaryConfig();
+}
+
+// ============ DASHBOARD ============
+function renderDashboard() {
+  const items = DB.get('items')||[];
+  const now = new Date();
+  const thisMonth = items.filter(i => {
+    const d = new Date(i.createdAt);
+    return d.getMonth()===now.getMonth() && d.getFullYear()===now.getFullYear();
+  });
+  document.getElementById('statTotal').textContent = items.length;
+  document.getElementById('statMonth').textContent = thisMonth.length;
+  if (currentUser.role==='admin') {
+    const pending = (DB.get('users')||[]).filter(u=>u.status==='pending');
+    document.getElementById('statPending').textContent = pending.length;
+  }
+  const recent = [...items].reverse().slice(0,6);
+  document.getElementById('recentItems').innerHTML = recent.length
+    ? recent.map(itemCard).join('')
+    : `<div class="empty-state" style="grid-column:1/-1">
+        <div class="empty-icon"><i class="ti ti-photo-off"></i></div>
+        <p>ยังไม่มีผลงานในระบบ</p>
+       </div>`;
+}
+
+// ============ SEARCH ============
+let currentYearFilter='';
+
+function renderSearch(q) {
+  const items = DB.get('items')||[];
+  const yearFilter = currentYearFilter||'';
+  let results = items.filter(i => {
+    const match = !q || [i.title,i.student,i.desc,i.tags,i.level,i.award].join(' ').toLowerCase().includes(q.toLowerCase());
+    const yr = !yearFilter || i.year===yearFilter;
+    return match && yr;
+  }).reverse();
+  document.getElementById('searchCount').textContent = `พบ ${results.length} รายการ`;
+  document.getElementById('searchResults').innerHTML = results.length
+    ? results.map(itemCard).join('')
+    : `<div class="empty-state" style="grid-column:1/-1">
+        <div class="empty-icon"><i class="ti ti-search-off"></i></div>
+        <p>ไม่พบผลงานที่ค้นหา</p>
+       </div>`;
+  const years = [...new Set(items.map(i=>i.year).filter(Boolean))].sort().reverse();
+  document.getElementById('searchFilters').innerHTML =
+    `<button class="filter-btn ${!yearFilter?'active-filter':''}" onclick="filterYear('')">ทุกปี</button>` +
+    years.map(y=>`<button class="filter-btn ${yearFilter===y?'active-filter':''}" onclick="filterYear('${y}')">${y}</button>`).join('');
+}
+
+function filterYear(y) { currentYearFilter=y; doSearch(); }
+function doSearch() { renderSearch(document.getElementById('searchInput').value.trim()); }
+
+// ============ ITEM CARD ============
+function awardBadgeClass(award) {
+  if (!award) return '';
+  if (award.includes('ชนะเลิศ')||award.includes('ทอง')) return 'badge-gold';
+  if (award.includes('รอง')||award.includes('เงิน')) return 'badge-navy';
+  if (award.includes('3')||award.includes('ทองแดง')) return 'badge-amber';
+  return 'badge-teal';
+}
+
+function itemCard(item) {
+  const thumb = item.fileType==='image' && item.url
+    ? `<div class="item-thumb"><img src="${item.url}" alt="${item.title}" loading="lazy">${item.year?`<span class="item-year-tag">${item.year}</span>`:''}</div>`
+    : `<div class="item-thumb-icon"><i class="ti ti-file-description"></i></div>`;
+  const levelBadge = item.level ? `<span class="badge badge-navy">${item.level}</span>` : '';
+  const awardBadge = item.award ? `<span class="badge ${awardBadgeClass(item.award)}">${item.award}</span>` : '';
+  return `<div class="item-card" onclick="showDetail('${item.id}')">
+    ${thumb}
+    <div class="item-body">
+      <div class="item-title" title="${item.title}">${item.title}</div>
+      <div class="item-meta">${levelBadge}${awardBadge}</div>
+      <div class="item-footer">
+        ${item.student?`<span><i class="ti ti-user" style="font-size:12px;vertical-align:-1px;margin-right:2px"></i>${item.student}</span>`:'<span></span>'}
+        ${item.year&&item.fileType==='image'?'':(item.year?`<span>${item.year}</span>`:'')}
+      </div>
+    </div>
+  </div>`;
+}
+
+// ============ DETAIL MODAL ============
+function showDetail(id) {
+  const item = (DB.get('items')||[]).find(i=>i.id===id);
+  if (!item) return;
+  document.getElementById('modalTitle').textContent = item.title;
+  const canDelete = currentUser.role==='admin' || item.uploadedBy===currentUser.id;
+  const imgHtml = item.fileType==='image' && item.url
+    ? `<img src="${item.url}" class="modal-img" alt="${item.title}">`
+    : item.url
+      ? `<div style="padding:12px 14px;background:var(--navy-50);border-radius:var(--radius-md);margin-bottom:1.25rem;display:flex;align-items:center;gap:10px;border:1px solid var(--navy-100)"><i class="ti ti-file" style="font-size:22px;color:var(--navy-400)"></i><a href="${item.url}" target="_blank" style="color:var(--navy-700);font-weight:500;font-size:14px">เปิดไฟล์แนบ</a></div>`
+      : '';
+  document.getElementById('modalBody').innerHTML = imgHtml + `
+    <div class="detail-row"><span class="detail-label">ชื่อผลงาน</span><span style="font-weight:600">${item.title}</span></div>
+    ${item.student?`<div class="detail-row"><span class="detail-label">นักเรียน / ทีม</span><span>${item.student}</span></div>`:''}
+    ${item.year?`<div class="detail-row"><span class="detail-label">ปีการศึกษา</span><span>${item.year}</span></div>`:''}
+    ${item.level?`<div class="detail-row"><span class="detail-label">ระดับรางวัล</span><span><span class="badge badge-navy">${item.level}</span></span></div>`:''}
+    ${item.award?`<div class="detail-row"><span class="detail-label">ประเภทรางวัล</span><span><span class="badge ${awardBadgeClass(item.award)}">${item.award}</span></span></div>`:''}
+    ${item.desc?`<div class="detail-row"><span class="detail-label">รายละเอียด</span><span style="line-height:1.6">${item.desc}</span></div>`:''}
+    ${item.tags?`<div class="detail-row"><span class="detail-label">แท็ก</span><span style="display:flex;gap:5px;flex-wrap:wrap">${item.tags.split(',').map(t=>`<span class="badge badge-amber">${t.trim()}</span>`).join('')}</span></div>`:''}
+    <div class="detail-row"><span class="detail-label">อัพโหลดโดย</span><span>${item.uploaderName||'-'}</span></div>
+    <div class="detail-row"><span class="detail-label">วันที่บันทึก</span><span>${new Date(item.createdAt).toLocaleDateString('th-TH',{year:'numeric',month:'long',day:'numeric'})}</span></div>
+    ${canDelete?`<div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--gray-100)"><button class="btn btn-danger btn-sm" onclick="deleteItem('${item.id}')"><i class="ti ti-trash"></i> ลบผลงาน</button></div>`:''}
+  `;
+  document.getElementById('detailModal').classList.add('open');
+}
+
+function closeModal() { document.getElementById('detailModal').classList.remove('open'); }
+document.getElementById('detailModal').addEventListener('click', e => { if(e.target===e.currentTarget) closeModal(); });
+
+function deleteItem(id) {
+  if (!confirm('ยืนยันการลบผลงานนี้?')) return;
+  let items = DB.get('items')||[];
+  items = items.filter(i=>i.id!==id);
+  DB.set('items', items);
+  closeModal();
+  renderDashboard();
+  renderSearch(document.getElementById('searchInput').value.trim());
+}
+
+// ============ UPLOAD ============
+function populateYears() {
+  const sel = document.getElementById('upYear');
+  const y = new Date().getFullYear()+543;
+  sel.innerHTML = '<option value="">-- เลือกปี --</option>';
+  for(let i=y;i>=y-10;i--) sel.innerHTML += `<option value="${i}">${i}</option>`;
+}
+
+function onFileSelect(e) {
+  Array.from(e.target.files).forEach(f => {
+    if (!selectedFiles.find(x=>x.file.name===f.name && x.file.size===f.size))
+      selectedFiles.push({ file:f, customName: f.name.replace(/\.[^.]+$/,'') });
+  });
+  renderFilePreviews();
+}
+
+function renderFilePreviews() {
+  const wrap = document.getElementById('filePreviewWrap');
+  if (!selectedFiles.length) { wrap.innerHTML=''; return; }
+  wrap.innerHTML = `<p class="files-header">${selectedFiles.length} ไฟล์ที่เลือก — แก้ไขชื่อได้ก่อนบันทึก</p>` +
+    selectedFiles.map((item,idx) => {
+      const isImg = item.file.type.startsWith('image/');
+      const size = item.file.size < 1024*1024 ? (item.file.size/1024).toFixed(0)+' KB' : (item.file.size/1024/1024).toFixed(1)+' MB';
+      const ext = item.file.name.match(/\.[^.]+$/)?.[0]||'';
+      const thumb = isImg
+        ? `<img id="fthumb_${idx}" class="fthumb" src="" alt="">`
+        : `<div class="ficon"><i class="ti ti-file-description"></i></div>`;
+      return `<div class="file-rename-row">
+        ${thumb}
+        <input class="fname-input" type="text" value="${item.customName}" placeholder="ชื่อไฟล์" oninput="selectedFiles[${idx}].customName=this.value">
+        <span class="fsize">${size} ${ext}</span>
+        <button class="btn btn-sm btn-danger" onclick="removeFile(${idx})"><i class="ti ti-x"></i></button>
+      </div>`;
+    }).join('');
+  selectedFiles.forEach((item,idx) => {
+    if (item.file.type.startsWith('image/')) {
+      const el = document.getElementById('fthumb_'+idx);
+      if (el) { const r=new FileReader(); r.onload=ev=>el.src=ev.target.result; r.readAsDataURL(item.file); }
+    }
+  });
+}
+
+function removeFile(idx) { selectedFiles.splice(idx,1); renderFilePreviews(); }
+
+function clearFile() {
+  selectedFiles=[];
+  document.getElementById('fileInput').value='';
+  renderFilePreviews();
+}
+
+function resetUploadForm() {
+  ['upTitle','upStudent','upDesc','upTags'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('upYear').value='';
+  document.getElementById('upLevel').value='';
+  document.getElementById('upAward').value='';
+  document.getElementById('uploadAlert').innerHTML='';
+  clearFile();
+}
+
+async function uploadToCloudinary(file, cfg) {
+  const fd = new FormData();
+  fd.append('file', file);
+  fd.append('upload_preset', cfg.preset);
+  fd.append('folder', 'school-portfolio');
+  const res = await fetch(`https://api.cloudinary.com/v1_1/${cfg.cloudName}/auto/upload`, { method:'POST', body:fd });
+  if (!res.ok) throw new Error('Upload failed: '+res.status);
+  const data = await res.json();
+  return { url: data.secure_url, fileType: file.type.startsWith('image/') ? 'image' : 'file' };
+}
+
+async function doUpload() {
+  const title = document.getElementById('upTitle').value.trim();
+  if (!title) return showAlert('uploadAlert','กรุณากรอกชื่อผลงาน');
+  const cfg = DB.get('cloudinary')||{};
+  const commonData = {
+    student: document.getElementById('upStudent').value.trim(),
+    year: document.getElementById('upYear').value,
+    level: document.getElementById('upLevel').value,
+    award: document.getElementById('upAward').value,
+    desc: document.getElementById('upDesc').value.trim(),
+    tags: document.getElementById('upTags').value.trim(),
+    uploadedBy: currentUser.id,
+    uploaderName: currentUser.name,
+    createdAt: new Date().toISOString()
+  };
+  if (selectedFiles.length === 0) {
+    const items = DB.get('items')||[];
+    items.push({ id:'i'+Date.now(), title, url:'', fileType:'', ...commonData });
+    DB.set('items', items);
+    showAlert('uploadAlert','บันทึกผลงานสำเร็จ!','success');
+    resetUploadForm();
+    return;
+  }
+  if (!cfg.cloudName||!cfg.preset) return showAlert('uploadAlert','กรุณาตั้งค่า Cloudinary ก่อน (เมนูตั้งค่าระบบ)');
+  const progWrap = document.getElementById('uploadProgress');
+  const progFill = document.getElementById('progFill');
+  const progText = document.getElementById('progText');
+  progWrap.style.display='block';
+  const items = DB.get('items')||[];
+  let done=0, errors=[];
+  for (let i=0; i<selectedFiles.length; i++) {
+    const {file, customName} = selectedFiles[i];
+    const ext = file.name.match(/\.[^.]+$/)?.[0]||'';
+    progText.textContent = `กำลังอัพโหลด ${i+1}/${selectedFiles.length}: ${customName||file.name}`;
+    progFill.style.width = Math.round((i/selectedFiles.length)*80)+'%';
+    try {
+      const {url, fileType} = await uploadToCloudinary(file, cfg);
+      const itemTitle = selectedFiles.length===1 ? title : `${title} — ${customName.trim()||file.name.replace(/\.[^.]+$/,'')}`;
+      items.push({ id:'i'+(Date.now()+i), title:itemTitle, url, fileType, ...commonData });
+      done++;
+    } catch(err) { errors.push(file.name+': '+err.message); }
+  }
+  DB.set('items', items);
+  progFill.style.width='100%';
+  progWrap.style.display='none';
+  if (errors.length) {
+    showAlert('uploadAlert', `อัพโหลดสำเร็จ ${done} ไฟล์ — ล้มเหลว: ${errors.join(', ')}`, 'warn');
+  } else {
+    showAlert('uploadAlert', `บันทึกผลงานสำเร็จ ${done} ไฟล์!`, 'success');
+  }
+  resetUploadForm();
+}
+
+// ============ ADMIN ============
+function renderAdmin() {
+  const users = (DB.get('users')||[]).filter(u=>u.id!==currentUser.id);
+  document.getElementById('userTableBody').innerHTML = users.map(u=>`
+    <tr>
+      <td style="font-weight:500">${u.name}</td>
+      <td><code>${u.username}</code></td>
+      <td>${u.dept||'-'}</td>
+      <td>${new Date(u.createdAt).toLocaleDateString('th-TH',{year:'numeric',month:'short',day:'numeric'})}</td>
+      <td><span class="status-badge status-${u.status}">${{pending:'รอการอนุมัติ',approved:'อนุมัติแล้ว',rejected:'ปฏิเสธ'}[u.status]||u.status}</span></td>
+      <td style="display:flex;gap:5px;flex-wrap:wrap">
+        ${u.status!=='approved'?`<button class="btn btn-success btn-sm" onclick="approveUser(${u.id})"><i class="ti ti-check"></i> อนุมัติ</button>`:''}
+        ${u.status!=='rejected'?`<button class="btn btn-danger btn-sm" onclick="rejectUser(${u.id})"><i class="ti ti-x"></i> ปฏิเสธ</button>`:''}
+      </td>
+    </tr>`).join('');
+}
+
+function approveUser(id) {
+  const users = DB.get('users')||[];
+  const u = users.find(x=>x.id===id);
+  if(u) u.status='approved';
+  DB.set('users',users); renderAdmin(); renderDashboard();
+}
+
+function rejectUser(id) {
+  const users = DB.get('users')||[];
+  const u = users.find(x=>x.id===id);
+  if(u) u.status='rejected';
+  DB.set('users',users); renderAdmin();
+}
+
+// ============ SETTINGS ============
+function loadCloudinaryConfig() {
+  const cfg = DB.get('cloudinary')||{};
+  document.getElementById('cfCloudName').value = cfg.cloudName||'';
+  document.getElementById('cfPreset').value = cfg.preset||'';
+}
+
+function saveCloudinaryConfig() {
+  DB.set('cloudinary', { cloudName:document.getElementById('cfCloudName').value.trim(), preset:document.getElementById('cfPreset').value.trim() });
+  showAlert('settingsAlert','บันทึกการตั้งค่าแล้ว','success');
+}
+
+function clearAllData() {
+  if (confirm('ล้างข้อมูล items ทั้งหมด?')) { DB.set('items',[]); renderDashboard(); }
+}
+
+// ============ DRAG & DROP ============
+const dz = document.getElementById('dropZone');
+dz.addEventListener('dragover', e=>{ e.preventDefault(); dz.style.borderColor='var(--navy-400)'; dz.style.background='var(--navy-50)'; });
+dz.addEventListener('dragleave', ()=>{ dz.style.borderColor=''; dz.style.background=''; });
+dz.addEventListener('drop', e=>{
+  e.preventDefault(); dz.style.borderColor=''; dz.style.background='';
+  Array.from(e.dataTransfer.files).forEach(f=>{
+    if (!selectedFiles.find(x=>x.file.name===f.name && x.file.size===f.size))
+      selectedFiles.push({ file:f, customName: f.name.replace(/\.[^.]+$/,'') });
+  });
+  renderFilePreviews();
+});
+
+// ============ INIT ============
+initDB();
+populateYears();
+</script>
+</body>
+</html>
